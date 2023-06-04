@@ -1,0 +1,22 @@
+body {
+    counter-reset: section;
+}
+h2::before{
+    counter-increment: section;
+    content: "Раздел " counter(section) ". ";
+}
+p:nth-child(even){
+   background-color: yellow;
+}
+p::selection{
+    background-color: aqua;
+}
+ul {
+    counter-reset: list;
+}
+li::before{
+    counter-increment: list;
+    content: counter(list) ".";
+}
+li{ list-style-type: none;
+}
